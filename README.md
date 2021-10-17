@@ -3,6 +3,9 @@
 
 The value of a car depreciates each year right from its purchase to the present day. The model helps to predicts the estimated value of resales car based on several parameters which includes brand and model of a car, total kilometres driven, mileages, power, and all others factors, that affect the affecting car’s resale value.
 
+
+![App Screenshot](https://livecartracker.com/images/gif-pricing.gif)
+
 #### Data Fields
 There are id and 12 characteristics of cars and the price.
 
