@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html >
+<body>
+ <div class="login">
+	<h1>Predict Use Car loan  Price</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+	<select name="Location" required="required">
+	<option ></option>
+	<option >Ahmedabad</option>
+	<option >Bangalore</option>
+	<option >Chennai</option>
+	<option >Coimbatore</option>
+	<option >Delhi</option>
+	<option >Hyderabad</option>
+	<option >Jaipur</option>
+	<option >Kochi</option>
+	<option >Kolkata</option>	
+	<option >Mumbai</option>
+	<option >Pune</option>
+	<option >Other</option>
+	</Select>
+	<select name="Brand_Name" required="required">
+		<option ></option>
+		<option >Maruti</option>
+		<option >Honda</option>
+		</Select>
+	<select name="Transmission" required="required">
+	<option >Manual</option>
+	<option >Automatic</option>
+	</Select>
+    	<input type="text" name="Car_Age" placeholder="Year of manfucturing" required="required" />
+    	<input type="text" name="Mileage" placeholder="Mileage" required="required" />
+        <input type="text" name="Engine" placeholder="Engine" required="required" />
+        <input type="text" name="Power" placeholder="Power" required="required" />
+	<input type="text" name="Seats" placeholder="Seats" required="required" />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
