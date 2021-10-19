@@ -9,3 +9,4 @@ xgboost
 catboost
 lightgbm
 joblib
+flask
