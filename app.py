@@ -18,7 +18,7 @@ def predict():
     int_features = request.form.to_dict()
     df=pd.DataFrame(int_features,index=[0])
     output=model.predict(df)
-      return render_template('index.html', prediction_text='Employee Salary should be $ {}'.format(output))
+    return render_template('index.html', prediction_text='Employee Salary should be $ {}'.format(output))
 
 
 if __name__ == "__main__":
