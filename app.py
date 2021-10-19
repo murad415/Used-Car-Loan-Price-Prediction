@@ -18,23 +18,8 @@ def predict():
     int_features = request.form.to_dict()
     df=pd.DataFrame(int_features,index=[0])
     output=model.predict(df)
-    # final_features = [np.array(int_features)]
-    # prediction = model.predict(final_features)
+      return render_template('index.html', prediction_text='Employee Salary should be $ {}'.format(output))
 
-    # output = round(prediction[0], 2)
-
-    return render_template('index.html', prediction_text='Employee Salary should be $ {}'.format(output))
-
-# @app.route('/predict_api',methods=['POST'])
-# def predict_api():
-#     '''
-#     For direct API calls trought request
-#     '''
-#     data = request.get_json(force=True)
-#     prediction = model.predict([np.array(list(data.values()))])
-
-#     output = prediction[0]
-#     return jsonify(output)
 
 if __name__ == "__main__":
     app.run(debug=True)
