@@ -6,6 +6,8 @@ The value of a car depreciates each year right from its purchase to the present 
 
 ![App Screenshot](https://livecartracker.com/images/gif-pricing.gif)
 
+Source :https://livecartracker.com/
+
 #### Data Fields
 There are id and 12 characteristics of cars and the price.
 
@@ -23,3 +25,5 @@ There are id and 12 characteristics of cars and the price.
 12. Seats - The number of seats in the car.
 13. New_Price - The price of a new car of the same model.
 14. Price - The price of the car (target)
+
+Source:Kaggle
