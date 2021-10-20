@@ -1,7 +1,5 @@
 pandas
 numpy
-datetime
-re
 matplotlib
 sklearn
 category_encoders
