@@ -20,8 +20,8 @@ def predict():
     int_features = request.form.to_dict()
     df=pd.DataFrame(int_features,index=[0])
     df.Year=pd.to_numeric(df.Year)
-    output=model.predict(df)
-    return render_template('index.html', prediction_text='Price of Car is $ {}'.format(output))
+    output=np.round(model.predict(df),2)
+    return render_template('index.html', prediction_text='Used car Price is  {}'.format(output))
 
 
 if __name__ == "__main__":
