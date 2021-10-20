@@ -7,7 +7,7 @@
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
 	<select name="Location" required="required">
-	<option ></option>
+	<option >Selct City</option>
 	<option >Ahmedabad</option>
 	<option >Bangalore</option>
 	<option >Chennai</option>
@@ -22,19 +22,48 @@
 	<option >Other</option>
 	</Select>
 	<select name="Brand_Name" required="required">
-		<option ></option>
-		<option >Maruti</option>
-		<option >Honda</option>
+		<option >Select Brand Name</option>
+		<Option>Ambassador</Option>
+		<Option>Audi</Option>
+		<Option>Bentley</Option>
+		<Option>BMW</Option>
+		<Option>Chevrolet</Option>
+		<Option>Datsun</Option>
+		<Option>Fiat</Option>
+		<Option>Force</Option>
+		<Option>Ford</Option>
+		<Option>Honda</Option>
+		<Option>Hyundai</Option>
+		<Option>Isuzu</Option>
+		<Option>Jaguar</Option>
+		<Option>Jeep</Option>
+		<Option>Lamborghini</Option>
+		<Option>Land</Option>
+		<Option>Mahindra</Option>
+		<Option>Maruti</Option>
+		<Option>Mercedes-Benz</Option>
+		<Option>Mini</Option>
+		<Option>Mitsubishi</Option>
+		<Option>Nissan</Option>
+		<Option>Porsche</Option>
+		<Option>Renault</Option>
+		<Option>Skoda</Option>
+		<Option>Smart</Option>
+		<Option>Tata</Option>
+		<Option>Toyota</Option>
+		<Option>Volkswagen</Option>
+		<Option>Volvo</Option>
+
 		</Select>
 	<select name="Transmission" required="required">
 	<option >Manual</option>
 	<option >Automatic</option>
 	</Select>
-    	<input type="text" name="Car_Age" placeholder="Year of manfucturing" required="required" />btt-[0-255]
-    	<input type="text" name="Mileage" placeholder="Mileage" required="required" />
-        <input type="text" name="Engine" placeholder="Engine" required="required" />
-        <input type="text" name="Power" placeholder="Power" required="required" />
-	<input type="text" name="Seats" placeholder="Seats" required="required" />
+    	<input type="text" name="Year" placeholder="Year of manfucturing" required="required" />
+    	<input type="text" name="Mileage" placeholder="Mileage" required="required" />btw-[0-50]
+        <input type="text" name="Engine" placeholder="Engine" required="required" />btw-[500-6000]
+        <input type="text" name="Power" placeholder="Power" required="required" />btw-[30-500]
+	<input type="text" name="Seats" placeholder="Seats" required="required" />btw-[2-10]
 
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>

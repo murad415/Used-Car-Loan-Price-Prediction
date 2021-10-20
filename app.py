@@ -1,10 +1,12 @@
 import numpy as np
 from flask import Flask, request, jsonify, render_template
-import joblib
+import dill
 import pandas as pd
+import datetime as dt
 
 app = Flask(__name__)
-model = joblib.load("Lightgbm")
+with open("Training_Model_ Lightgbm", 'rb') as pickle_file:
+    model=dill.load(pickle_file)
 
 @app.route('/')
 def home():
@@ -17,8 +19,9 @@ def predict():
     '''
     int_features = request.form.to_dict()
     df=pd.DataFrame(int_features,index=[0])
+    df.Year=pd.to_numeric(df.Year)
     output=model.predict(df)
-    return render_template('index.html', prediction_text='Employee Salary should be $ {}'.format(output))
+    return render_template('index.html', prediction_text='Price of Car is $ {}'.format(output))
 
 
 if __name__ == "__main__":
